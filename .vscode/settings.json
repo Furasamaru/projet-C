@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "string.h": "c",
+    "style.h": "c",
+    "ellipse.h": "c"
+  }
+}
