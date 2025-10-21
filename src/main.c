@@ -157,6 +157,7 @@ int main()
                         press_enter();
                         break;
                     }
+                    system("clear");
 
                     for (int i = 0; i < lineCount; i++)
                     {
@@ -180,9 +181,11 @@ int main()
                         {
                         case 1:
                         {
+                            system("clear");
                             int dx = resp("X new location: ");
                             int dy = resp("Y new location: ");
                             move_line(lines[li], dx, dy);
+                            system("clear");
                             relocated_line();
                             for (int i = 0; i < lineCount; i++)
                             {
@@ -194,8 +197,10 @@ int main()
                         }
                         case 2:
                         {
+                            system("clear");
                             float factor = resp("New scale: ");
                             rescale_line(lines[li], factor);
+                            system("clear");
                             rescaled_line();
                             for (int i = 0; i < lineCount; i++)
                             {
@@ -207,8 +212,10 @@ int main()
                         }
                         case 3:
                         {
+                            system("clear");
                             Style *newStyle = input_style();
                             recolor_line(lines[li], newStyle);
+                            system("clear");
                             recolored_line();
                             for (int i = 0; i < lineCount; i++)
                             {
@@ -235,6 +242,7 @@ int main()
                         press_enter();
                         break;
                     }
+                    system("clear");
 
                     for (int i = 0; i < rectCount; i++)
                     {
@@ -258,24 +266,45 @@ int main()
                         {
                         case 1:
                         {
+                            system("clear");
                             int dx = resp("X New Location: ");
                             int dy = resp("Y New Location: ");
                             move_rect(rects[ri], dx, dy);
+                            system("clear");
                             relocated_rect();
+                            for (int i = 0; i < rectCount; i++)
+                            {
+                                printf("[%d] ", i);
+                                print_rect(rects[i]);
+                            }
                             break;
                         }
                         case 2:
                         {
+                            system("clear");
                             float factor = resp("New scale: ");
                             rescale_rect(rects[ri], factor);
+                            system("clear");
                             rescaled_rect();
+                            for (int i = 0; i < rectCount; i++)
+                            {
+                                printf("[%d] ", i);
+                                print_rect(rects[i]);
+                            }
                             break;
                         }
                         case 3:
                         {
+                            system("clear");
                             Style *newStyle = input_style();
                             recolor_rect(rects[ri], newStyle);
+                            system("clear");
                             recolored_rect();
+                            for (int i = 0; i < rectCount; i++)
+                            {
+                                printf("[%d] ", i);
+                                print_rect(rects[i]);
+                            }
                             break;
                         }
                         case 4:
@@ -287,7 +316,7 @@ int main()
                     }
                     break;
 
-                case 3: // 🔹 Modifier un cercle
+                case 3:
                     if (circleCount == 0)
                     {
                         system("clear");
@@ -295,6 +324,7 @@ int main()
                         press_enter();
                         break;
                     }
+                    system("clear");
 
                     for (int i = 0; i < circleCount; i++)
                     {
@@ -318,24 +348,45 @@ int main()
                         {
                         case 1:
                         {
+                            system("clear");
                             int dx = resp("X new location: ");
                             int dy = resp("Y new location: ");
                             move_circle(circles[ci], dx, dy);
+                            system("clear");
                             relocated_circle();
+                            for (int i = 0; i < circleCount; i++)
+                            {
+                                printf("[%d] ", i);
+                                print_circle(circles[i]);
+                            }
                             break;
                         }
                         case 2:
                         {
+                            system("clear");
                             float factor = resp("New scale: ");
                             rescale_circle(circles[ci], factor);
+                            system("clear");
                             rescaled_circle();
+                            for (int i = 0; i < circleCount; i++)
+                            {
+                                printf("[%d] ", i);
+                                print_circle(circles[i]);
+                            }
                             break;
                         }
                         case 3:
                         {
+                            system("clear");
                             Style *newStyle = input_style();
                             recolor_circle(circles[ci], newStyle);
+                            system("clear");
                             recolored_circle();
+                            for (int i = 0; i < circleCount; i++)
+                            {
+                                printf("[%d] ", i);
+                                print_circle(circles[i]);
+                            }
                             break;
                         }
                         case 4:
@@ -355,6 +406,7 @@ int main()
                         press_enter();
                         break;
                     }
+                    system("clear");
 
                     for (int i = 0; i < ellipseCount; i++)
                     {
@@ -378,24 +430,45 @@ int main()
                         {
                         case 1:
                         {
+                            system("clear");
                             int dx = resp("X new location: ");
                             int dy = resp("Y new location: ");
                             move_ellipse(ellipses[ei], dx, dy);
+                            system("clear");
                             relocated_ellipse();
+                            for (int i = 0; i < ellipseCount; i++)
+                            {
+                                printf("[%d] ", i);
+                                print_ellipse(ellipses[i]);
+                            }
                             break;
                         }
                         case 2:
                         {
+                            system("clear");
                             float factor = resp("New scale: ");
                             rescale_ellipse(ellipses[ei], factor);
+                            system("clear");
                             rescaled_ellipse();
+                            for (int i = 0; i < ellipseCount; i++)
+                            {
+                                printf("[%d] ", i);
+                                print_ellipse(ellipses[i]);
+                            }
                             break;
                         }
                         case 3:
                         {
+                            system("clear");
                             Style *newStyle = input_style();
                             recolor_ellipse(ellipses[ei], newStyle);
+                            system("clear");
                             recolored_ellipse();
+                            for (int i = 0; i < ellipseCount; i++)
+                            {
+                                printf("[%d] ", i);
+                                print_ellipse(ellipses[i]);
+                            }
                             break;
                         }
                         case 4:
