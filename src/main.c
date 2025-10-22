@@ -59,21 +59,20 @@ int main()
     }
     fprintf(f, "<svg width=\"500\" height=\"400\" xmlns=\"http://www.w3.org/2000/svg\">\n");
 
-    // 🔹 Boucle principale
-    while (mainRunning)
+        while (mainRunning)
     {
         show_menu();
         choice = resp("Your choice: ");
 
         switch (choice)
         {
-        case 1: // Lignes
+        case 1:
         {
             system("clear");
             Style *style = input_style();
             Line *line = input_line(style);
             draw_line(f, line);
-            lines[lineCount++] = line; // sauvegarde
+            lines[lineCount++] = line;
             system("clear");
             added_line();
             for (int i = 0; i < lineCount; i++)
@@ -85,7 +84,7 @@ int main()
             break;
         }
 
-        case 2: // Rectangles
+        case 2:
         {
             system("clear");
             Style *style = input_style();
@@ -103,7 +102,7 @@ int main()
             break;
         }
 
-        case 3: // Cercles
+        case 3:
         {
             system("clear");
             Style *style = input_style();
@@ -121,7 +120,7 @@ int main()
             break;
         }
 
-        case 4: // Ellipses
+        case 4:
         {
             system("clear");
             Style *style = input_style();
@@ -139,7 +138,7 @@ int main()
             break;
         }
 
-        case 5: // 🔸 Menu de modification
+        case 5:
         {
             modifyRunning = 1;
             while (modifyRunning)
@@ -149,7 +148,7 @@ int main()
 
                 switch (mchoice)
                 {
-                case 1: // 🔹 Modifier une ligne
+                case 1:
                     if (lineCount == 0)
                     {
                         system("clear");
@@ -234,7 +233,7 @@ int main()
                     }
                     break;
 
-                case 2: // 🔹 Modifier un rectangle
+                case 2:
                     if (rectCount == 0)
                     {
                         system("clear");
@@ -398,7 +397,7 @@ int main()
                     }
                     break;
 
-                case 4: // 🔹 Modifier une ellipse
+                case 4:
                     if (ellipseCount == 0)
                     {
                         system("clear");

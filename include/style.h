@@ -12,13 +12,19 @@ typedef struct
     int stroke_width;
 } Style;
 
-// Create a new Style
+/**
+ * Create a new style
+ */
 Style *create_style(const char *fill, const char *stroke, int stroke_width);
 
-// Free a Style
-void free_style(Style *s);
+/**
+ * Free a style
+ */
+void free_style(Style *style);
 
-// Print Style to terminal
-void print_style(const Style *s);
+/**
+ * Print the style in the terminal
+ */
+void print_style(const Style *style);
 
 #endif

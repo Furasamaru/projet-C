@@ -2,25 +2,36 @@
 #define CIRCLE_H
 
 #include <stdio.h>
-#include "style.h" // MUST include style.h so Circle knows what Style is
+#include "style.h"
 
+/**
+ * Struct of the circle and its data
+ */
 typedef struct
 {
     int cx, cy;
     int radius;
-    Style *style; // Pointer to a Style struct
+    Style *style;
 } Circle;
 
-// Create a new Circle
+/**
+ * Function which creates a circle object
+ */
 Circle *create_circle(int cx, int cy, int radius, Style *style);
 
-// Free a Circle (does NOT free the Style)
+/**
+ * Function to free the memory used from a circle
+ */
 void free_circle(Circle *c);
 
-// Draw a Circle to a file (SVG)
+/**
+ * Function to draw the circle in SVG
+ */
 void draw_circle(FILE *f, const Circle *c);
 
-// Print a Circle to terminal
+/**
+ * Function to write down the data of a circle in the terminal
+ */
 void print_circle(const Circle *c);
 
 #endif

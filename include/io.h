@@ -7,19 +7,28 @@
 #include "ellipse.h"
 #include "style.h"
 
-// Menu principal
+/**
+ * Main Menu
+ */
 void show_menu();
 
-// Menu de modification
+/**
+ * Modification Menu
+ */
 void show_mmenu();
 
-// Menu de modification de
+/**
+ * Second Modification Menu
+ */
 void show_m1menu();
 
+/**
+ * Error message function
+ */
 void error_message();
 
 /**
- * @brief all responses regarding the line in the different menus
+ * @brief all functions which will give responses regarding the line in the different menus
  */
 void no_line();
 void added_line();
@@ -28,7 +37,7 @@ void rescaled_line();
 void recolored_line();
 
 /**
- * @brief all responses regarding the rectangle in the different menus
+ * @brief all functions which will give responses regarding the rectangle in the different menus
  */
 void no_rect();
 void added_rect();
@@ -37,7 +46,7 @@ void rescaled_rect();
 void recolored_rect();
 
 /**
- * @brief all responses regarding the circle in the different menus
+ * @brief all functions which will give responses regarding the circle in the different menus
  */
 void no_circle();
 void added_circle();
@@ -46,7 +55,7 @@ void rescaled_circle();
 void recolored_circle();
 
 /**
- * @brief all responses regarding the ellipse in the different menus
+ * @brief all functions which will give responses regarding the ellipse in the different menus
  */
 void no_ellipse();
 void added_ellipse();
@@ -54,12 +63,19 @@ void relocated_ellipse();
 void rescaled_ellipse();
 void recolored_ellipse();
 
+/**
+ * Function to continue (after that the terminal is cleared)
+ */
 char press_enter();
 
-// Fonction pour saisir un style
+/**
+ * Function to pick a style
+ */
 Style *input_style();
 
-// Fonctions pour saisir les différentes formes
+/**
+ * Functions to pick all the different forms/shapes
+ */
 Line *input_line(Style *style);
 Rect *input_rect(Style *style);
 Circle *input_circle(Style *style);
